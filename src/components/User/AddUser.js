@@ -1,12 +1,13 @@
 import React from "react";
-
+import Card from '../UI/Card'
 const AddUser=(props)=>{
     const submitHandler=(event)=>{
         event.preventDefault();
     };
 
       return(
-      <div>
+         <Card>
+      
      <form onSubmit={submitHandler}>
      <label for="username">User Name</label>
         <input id="username" type="text"/>
@@ -16,6 +17,8 @@ const AddUser=(props)=>{
 
         <button type="submit">Add User</button>
      </form>
-      </div>)
+     
+      </Card>
+      )
 };
 export default AddUser;
