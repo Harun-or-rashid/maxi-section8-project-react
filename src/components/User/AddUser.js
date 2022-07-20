@@ -9,6 +9,8 @@ const AddUser=(props)=>{
     const submitHandler=(event)=>{
         event.preventDefault();
         console.log(enteredAge,enteredUser)
+        setEnteredUser('');
+        setEnteredAge('');
     };
     const addUserHandler=(event)=>{
         setEnteredUser(event.target.value);
@@ -22,10 +24,21 @@ const AddUser=(props)=>{
       
      <form onSubmit={submitHandler}>
      <label  for="username">User Name</label>
-        <input  id="username" onChange={addUserHandler} type="text"/>
+        <input 
+         id="username" 
+         onChange={addUserHandler}
+         type="text"
+         value={enteredUser}
+          />
 
         <label for="age">Age</label>
-        <input className={classes.input} id="age" type="number" onChange={addAgeHandler}/>
+        <input 
+        className={classes.input} 
+        id="age" 
+        type="number"
+        onChange={addAgeHandler}
+         value={enteredAge}
+         />
 
         <Button type="submit"> Add User</Button> 
      </form>
