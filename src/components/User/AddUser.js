@@ -15,7 +15,7 @@ const AddUser=(props)=>{
             return;
         }
         props.onAddUser(enteredUser,enteredAge)
-        console.log(enteredAge,enteredUser)
+        // console.log(enteredAge,enteredUser)
         setEnteredUser('');
         setEnteredAge('');
     };
